@@ -4,7 +4,7 @@ metadata:
   name: test
   namespace: argocd
 spec:
-  replicas: 2
+  replicas: 4
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -21,7 +21,7 @@ spec:
         - containerPort: 80
         resources:
           limits:
-            cpu: 50m
+            cpu: 30m
             memory: 100Mi
           requests:
             cpu: 10m
