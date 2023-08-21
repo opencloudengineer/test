@@ -4,7 +4,7 @@ metadata:
   name: test
   namespace: argocd
 spec:
-  replicas: 1
+  replicas: 2
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -15,7 +15,7 @@ spec:
         app: test
     spec:
       containers:
-      - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+      - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
         name: test
         ports:
         - containerPort: 80
